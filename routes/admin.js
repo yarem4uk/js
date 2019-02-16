@@ -1,10 +1,12 @@
 import path from 'path';
 import express from 'express';
+import rootDir from '../util/path';
+
 
 const router = express.Router();
 
 router.use('/add-product', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'views', 'add-product.html'));
+  res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
 });
 
 router.post('/product', (req, res) => {
