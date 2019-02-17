@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Add product
+    link(rel="stylesheet" href="/assets/css/main.css")
+    link(rel="stylesheet" href="/assets/css/form.css")
+  body
+    header.main-header
+      nav.main-header__nav
+        ul.main-header__items
+          li.main-header__item
+            a(href="/") Shop
+          li.main-header__item
+            a.active(href="/admin/add-product") Add-product
+    main
+      form.product-form(action="/admin/add-product" method="POST")
+        .form-control
+          label(for="title") Title
+          input#title(type="text" name="title")
+          button.btn(type="submit") Add Product

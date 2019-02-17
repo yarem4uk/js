@@ -1,13 +1,14 @@
-import path from 'path';
+// import path from 'path';
 import express from 'express';
-import rootDir from '../util/path';
-
+// import rootDir from '../util/path';
+import * as adminData from './admin';
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.sendFile(path.join(rootDir, 'views', 'shop.html'));
-  // res.render('../views/shop');
+  const [products] = adminData.products;
+  console.log(products, 'shop product');
+  res.render('shop', { products, title: 'hello' });
 });
 
 export default router;
