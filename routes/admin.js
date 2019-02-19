@@ -9,14 +9,13 @@ const products = [];
 
 router.get('/add-product', (req, res) => {
   // res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
-  res.render('add-product');
+  res.render('add-product', { pageTitle: 'Add Products', path: '/admin/add-product' });
 });
 
 router.post('/add-product', (req, res) => {
   products.push({ title: req.body.title });
-  console.log(products);
+  console.log(products, 'admin routes');
   res.redirect('/');
-  console.log('hello from product route');
 });
 
 export { router, products };

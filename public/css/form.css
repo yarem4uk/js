@@ -4,9 +4,9 @@
 
 .form-control label,
 .form-control input {
-  width: 100%;
   display: block;
-  margin: 1rem 0;
+  width: 100%;
+  margin-bottom: .25rem;
 }
 
 .form-control input {
@@ -15,22 +15,6 @@
   border-radius: 2px;
 }
 
-/* button { */
-/*   font: inherit; */
-/*   border: 1px solid #3e00a1; */
-/*   background: white; */
-/*   color: #3e00a1; */
-/*   border-radius: 3px; */
-/*   cursor: pointer; */
-/* } */
-
-/* button:hover, */
-/* button:active { */
-/*   background: #3e00a1;; */
-/*   color: white; */
-/* } */
-
-/* button:focus, */
-/* .form-control input { */
-/*   outline: none; */
-/* } */
+.form-control input:focus {
+  outline-color: #00695c;
+}
